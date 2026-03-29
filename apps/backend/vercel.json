@@ -1,15 +1,18 @@
 {
-  "version": 2,
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "bunVersion": "1.x",
+  "installCommand": "bun install",
+  "outputDirectory": "dist",
   "builds": [
     {
-      "src": "dist/index.mjs",
+      "src": "index.mjs",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/index.mjs"
+      "dest": "index.mjs"
     }
   ]
 }
